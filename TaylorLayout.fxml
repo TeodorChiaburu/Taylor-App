@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.view.TaylorController">
+   <children>
+      <ToolBar fx:id="toolBar" prefHeight="100.0" prefWidth="700.0" />
+      <Canvas fx:id="canvas" height="500.0" translateY="100.0" width="700.0" />
+      <Label fx:id="funktionLabel" layoutX="15.0" layoutY="18.0" text="f =" textFill="#14c76d">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="funktionBox" layoutX="34.0" layoutY="14.0" onKeyPressed="#handleEnter" prefHeight="25.0" prefWidth="76.0" />
+      <Label fx:id="skalFunkLabel" layoutX="135.0" layoutY="18.0" text="a = " />
+      <TextField fx:id="skalFunkField" layoutX="156.0" layoutY="14.0" onKeyPressed="#handleEnter" prefHeight="25.0" prefWidth="50.0" />
+      <Label fx:id="skalArgLabel" layoutX="234.0" layoutY="18.0" text="b = " />
+      <TextField fx:id="skalArgField" layoutX="263.0" layoutY="14.0" onKeyPressed="#handleEnter" prefHeight="25.0" prefWidth="50.0" />
+      <Label fx:id="plusArgLabel" layoutX="342.0" layoutY="18.0" text="c = " />
+      <TextField fx:id="plusArgField" layoutX="373.0" layoutY="14.0" onKeyPressed="#handleEnter" prefHeight="25.0" prefWidth="50.0" />
+      <Label fx:id="plusFunkLabel" layoutX="442.0" layoutY="18.0" text="d = " />
+      <TextField fx:id="plusFunkField" layoutX="468.0" layoutY="14.0" onKeyPressed="#handleEnter" prefHeight="25.0" prefWidth="50.0" />
+      <Label fx:id="punktLabel" layoutX="15.0" layoutY="64.0" text="approximated in :" textFill="#e80808" />
+      <TextField fx:id="punktField" layoutX="110.0" layoutY="60.0" onKeyPressed="#handleEnter" prefHeight="25.0" prefWidth="50.0" />
+      <Label layoutX="176.0" layoutY="64.0" prefHeight="17.0" prefWidth="87.0" text="evaluated in : " translateX="5.0" fx:id="xStellenLabel" />
+      <TextField layoutX="256.0" layoutY="60.0" onAction="#handleOKButton" onKeyPressed="#handleEnter" prefHeight="25.0" prefWidth="50.0" fx:id="xStellenField" />
+      <Label fx:id="fehlerLabel" layoutX="331.0" layoutY="64.0" text="error : " translateX="5.0" />
+      <TextField fx:id="fehlerField" layoutX="373.0" layoutY="61.0" prefHeight="25.0" prefWidth="52.0" />
+      <Label fx:id="gradLabel" layoutX="453.0" layoutY="64.0" text="degree : " />
+      <Slider fx:id="gradSlider" blockIncrement="1.0" layoutX="493.0" layoutY="66.0" majorTickUnit="1.0" max="10.0" minorTickCount="0" onKeyPressed="#handleEnter" prefHeight="14.0" prefWidth="118.0" showTickLabels="true" showTickMarks="true" translateX="10.0" translateY="-10.0" />
+      <Button fx:id="okButton" layoutX="647.0" layoutY="60.0" mnemonicParsing="false" onAction="#handleOKButton" onKeyPressed="#handleEnter" text="OK" />
+      <Button fx:id="saveButton" layoutX="475.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleSaveButton" onKeyPressed="#handleEnter" text="Snapshot" translateX="75.0" />
+      <Button fx:id="helpButton" layoutX="639.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleHandbuch" onKeyPressed="#handleEnter" text="Help" />
+   </children>
+</AnchorPane>
